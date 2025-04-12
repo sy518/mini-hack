@@ -1,0 +1,7 @@
+.card{
+    width: 300px;
+    height: 350px;
+    display: flex;
+background-color: rgb(59, 56, 56);
+color: antiquewhite;
+}
