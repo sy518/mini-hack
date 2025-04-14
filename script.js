@@ -27,6 +27,7 @@ sumbit.addEventListener("click", function(event) {
             // Signed up 
             const user = userCredential.user;
             // ...
+            alert("login done");
             window.location.href = "login.html";
         })
         .catch((error) => {

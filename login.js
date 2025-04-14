@@ -26,7 +26,6 @@ sumbit.addEventListener("click", function (event) {
             const user = userCredential.user;
             // ...
 
-            alert("SHOP NOW!");
             window.location.href = "success.html";
         })
         .catch((error) => {
