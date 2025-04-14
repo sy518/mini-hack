@@ -3,18 +3,19 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBJ-v-UuoZFVO--nqyiHGY6iC8njeLaZxE",
-    authDomain: "test-code-3c187.firebaseapp.com",
-    projectId: "test-code-3c187",
-    storageBucket: "test-code-3c187.firebasestorage.app",
-    messagingSenderId: "452212989448",
-    appId: "1:452212989448:web:42db6e28339105c5f53bbd",
-    measurementId: "G-F172XVDX11"
+    apiKey: "AIzaSyCzzxYn_w71v--iCgqH_DnHF_1w3WewnCA",
+    authDomain: "hackaton-ab3d4.firebaseapp.com",
+    projectId: "hackaton-ab3d4",
+    storageBucket: "hackaton-ab3d4.firebasestorage.app",
+    messagingSenderId: "658877111926",
+    appId: "1:658877111926:web:74f99ae75b8543e4d7c957",
+    measurementId: "G-QSB8HB4K9P"
 };
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-sumbit.addEventListener("click", function (event) {
+let submit = document.getElementById("btn");
+submit.addEventListener("click", function (event) {
     event.preventDefault();
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value
@@ -24,12 +25,14 @@ sumbit.addEventListener("click", function (event) {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            // ...
-
+            
+           alert("good")
+           console.log("done");
+           
             window.location.href = "success.html";
         })
         .catch((error) => {
-            const errorCode = error.code;
+                          const errorCode = error.code;
             const errorMessage = error.message;
         });
 })
